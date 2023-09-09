@@ -3,6 +3,13 @@ server:
 spring:
   application:
     name: catalog-service
+  mongodb:
+    embedded:
+      version: 4.0.2
+    data:
+      mongodb:
+        database: test
+        port: 27018
   rabbitmq:
     username: guest
     password: guest
@@ -18,9 +25,6 @@ queue:
   movie:
     name: MovieQueue
 
-  serie:
-    name: SerieQueue
-
 eureka:
   client:
     register-with-eureka: true
@@ -34,4 +38,3 @@ eureka:
     prefer-ip-address: true
     lease-renewal-interval-in-seconds: 5
     lease-expiration-duration-in-seconds: 10
-
