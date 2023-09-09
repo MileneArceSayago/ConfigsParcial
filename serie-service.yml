@@ -22,9 +22,6 @@ spring:
       database: test
       port: 27017
 
-queue:
-  serie:
-    name: SerieQueue
 
 eureka:
   client:
