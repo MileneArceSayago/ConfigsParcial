@@ -3,6 +3,24 @@ server:
 spring:
   application:
     name: catalog-service
+  rabbitmq:
+    username: guest
+    password: guest
+    host: localhost
+    port: 5672
+    sleuth:
+      enabled: true
+    zipkin:
+      enabled: true
+      base-url: http://localhost:9411/
+
+queue:
+  movie:
+    name: MovieQueue
+
+  serie:
+    name: SerieQueue
+
 eureka:
   client:
     register-with-eureka: true
@@ -16,3 +34,4 @@ eureka:
     prefer-ip-address: true
     lease-renewal-interval-in-seconds: 5
     lease-expiration-duration-in-seconds: 10
+
