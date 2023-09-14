@@ -39,7 +39,6 @@ resilience4j:
         maxAttempts: 3
         waitDuration: 1000
         retryExceptions:
-          - feign.FeignException$InternalServerError
           - java.lang.RuntimeException
 
 eureka:
